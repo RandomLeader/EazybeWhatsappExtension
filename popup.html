@@ -1,0 +1,1315 @@
+<head>
+ 
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <!-- <script> src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"  </script> -->
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script> -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
+</head>
+<div>  
+   <dialog id="myFirstDialog" style="width:50%;background-color:#F4FFEF;border:1px dotted black;">  
+   <p><q>I am so clever that sometimes I don't understand a single word of what I am saying.   
+   </q> - <cite>Oscar Wilde</cite></p>  
+   <button id="hide">Close</button>  
+   </dialog>  
+   <button id="show">Show Dialog</button>  
+   </div>  
+<div id= "whatzappp" style="font-family: 'Poppins', sans-serif;">
+
+   <!-- /***********************************************************/ -->
+<!-- Horizontal bar -->
+
+<div id="horizontal-bar">
+<div id="horizontal-bar_left-section">
+   <li>All</li>
+   <div id='horizontal-bar_left-section_list'>
+   </div>
+   <i class="material-icons" id="horizontal-bar_left-section_plus-icon">add</i>
+</div>
+<div id="horizontal-bar_right-section">
+   <!-- <i class="material-icons">notifications</i> -->
+   <i class="material-icons" id='label-edit-button'>edit</i>
+   <i class="material-icons" id="label-edit-help">help_outline</i>
+</div>
+</div>
+
+<div id="add-label-popup">
+   <h4>Add Label</h4>
+   <i class="material-icons" id="add-label-popup_close-btn">cancel</i>
+   <div id="add-label-popup_input-section">
+      <input type="text" id="label-popup-input" />
+      <button id='add-label-btn'>Add</button>
+   </div>
+   <p id="error-message" style="color: red; display: none;">Enter Valid Input</p>
+   <p id="error-message_same-occurence" style="color: red; display: none;">Label already exists</p>
+</div>
+
+<div id="labels-edit-list-container">
+   <!-- <i class="material-icons" id="edit-label-popup_close-btn">cancel</i> -->
+   <div id="labels-edit-list"></div>
+   <button id="edit-label-popup_close-btn">Done</button>
+</div>
+ <!-- /***********************************************************************/ -->
+
+ <!-- /****************************************************************************/ -->
+<!-- email verification  -->
+
+<div id="email-verification">
+   <div class="email-verification_main-popup" id="email-verification_main-popup-first">
+      <div class="logo">
+         <!-- <img src="./assets/icons/icon.png" height="1rem" width="1rem" alt=""> -->
+         <h6>EazyBe</h6>
+      </div>
+      <h2>Verify your email</h2>
+      <input type="email" placeholder="Please enter email address" />
+      <button id="email-verify-btn-page1">Verify email</button>
+   </div>
+   <div class="email-verification_main-popup" id="email-verification_main-popup-second">
+      <div class="logo">
+         <!-- <img src="./assets/icons/icon.png" height="1rem" width="1rem" alt=""> -->
+         <h6>EazyBe</h6>
+      </div>
+      <div>
+         <h2>Please entered the OTP received</h2>
+         <p style="color: #4e4d4d69;">We've sent you an email containing the OTP</p>
+      </div>
+      <input type="email" placeholder="Enter OTP"
+       style="outline: none;border: none;border-bottom: 1px solid #e3e3e3;text-align: center;" />
+      <button id="email-verify-btn-page2">Verify email</button>
+      <a href="#">Resend OTP</a>
+   </div>
+   <div class="email-verification_main-popup" id="email-verification_main-popup-third">
+      <div class="logo">
+         <!-- <img src="./assets/icons/icon.png" height="1rem" width="1rem" alt=""> -->
+         <h6>EazyBe</h6>
+      </div>
+      <h3>Email verified!</h3>
+      <i class="material-icons" style="font-size: 150px;color: skyblue;text-align: center;">mark_email_read</i>
+      <p style="display: flex;color: #4e4d4d69; justify-content: center;" >Thank You!Please continue to use EazyBe<i class="material-icons" style="color: lightgreen;text-align: center;">check_circle</i></p>
+      <button id="email-verify-btn-page3">Continue</button>
+   </div>
+</div>
+
+ <!-- /****************************************************************************/ -->
+
+ <i class="material-icons">clear</i>
+ <div id="quick-replies"></div>
+
+  <!-- /****************************************************************************/ -->
+
+<div >
+   <button  id="scheduleBar" style="z-index: 1000000;text-align: center;">Send Message!</button>
+   </div>
+  <div id="greet">
+     <center class="heading">
+        <img  id ="logo" src="" alt="">
+        <br>
+        <span>
+           <div id= "upgrade" style="display: flex;
+           justify-content: center;
+           column-gap: 6px;
+           background: #af6a6a26">
+            <p id ="validity" >Validity Expires In: <b id ="validity-value"> </b></p>
+            <div >
+               <form id="isRegistered"  action="https://eazybe.com/home/" >
+             
+                  <input style="margin-top: 8px;" type="submit" class="rechargeButton" value="Recharge"/>
+               </form>
+           <button style="margin-top: 8px;" class="rechargeButton">Upgrade to Premium</button>
+               <p id ="dicount" style="display: none;  margin: 0;
+               color: white;
+               background: red;
+               width: 44px;
+               font-size: 11px;
+               margin-left: 86px;
+               margin-bottom: -10px;">50% off</p>
+            </div>
+            <button style="   display: none; position: absolute;
+            margin-left: 90%;
+            font-weight: 600;
+            font-size: 20px;">X</button>
+            
+           </div>
+           
+        </span>
+        <button id="contactUs" style="      right: 145px;
+        position: absolute;
+        margin-top: -7px;
+        margin-left: 43px;
+        width: 80px;
+        height: 33px;
+        font-weight: 600;
+        border-radius: 16px;
+        border: 0px solid;
+        color: white;
+    font-size: 15px;
+    background: #37af4e;
+       " >Help</button>
+        <span>
+           
+        </span>
+
+      
+     </center>
+  </div>
+  <div class="tabs">
+     <div id="expiredDiv">
+        <div style="    margin-top: 215px;
+        color: crimson;">
+         <center>
+            Validity Expired 
+            Please Recharge!
+         </center>
+        </div>
+
+     </div>
+     <div id="updateDiv">
+      <div style="    margin-top: 215px;
+      color: crimson;">
+       <center>
+          New Version of whatzapp is live.
+          Please update!
+   <br>
+         
+       </center>
+      </div>
+
+     </div>
+
+
+
+     <div id ="addingNewUser11" style="    position: absolute;
+z-index: 1100;">
+
+
+
+
+            <div id="overlayPhone" style=" display: none;   
+            position: fixed;
+            height: 92%;
+            width: 100%;
+            right: 0px;
+            background: black;
+        
+            opacity: 0.8;
+            z-index: 0;">
+            </div>
+
+            <div id="textInfoNewUser" style="display: none;    position: fixed;
+                top: 39%;
+    left: 10%;
+            color: white;">
+<p>Enter a Mobile No</p>
+            </div>
+            <div id="newUserMobile" style="    display: none;
+            position: fixed;
+            flex-wrap: wrap;
+            width: 84%;
+            top: 46%;
+            left: 10%;
+            justify-content: space-between;">
+               <div  >
+                  <select style="   font-size: 0.8rem;    width: 105px;" class="form-control" name="gflag" id="gflag">
+                     <option data-countryCode="DZ" value="213">Algeria ( +213)</option>
+                     <option data-countryCode="AD" value="376">Andorra ( +376)</option>
+                     <option data-countryCode="AO" value="244">Angola ( +244)</option>
+                     <option data-countryCode="AI" value="1264">Anguilla ( +1264)</option>
+                     <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda ( +1268)</option>
+                     <option data-countryCode="AR" value="54">Argentina ( +54)</option>
+                     <option data-countryCode="AM" value="374">Armenia ( +374)</option>
+                     <option data-countryCode="AW" value="297">Aruba ( +297)</option>
+                     <option data-countryCode="AU" value="61">Australia ( +61)</option>
+                     <option data-countryCode="AT" value="43">Austria ( +43)</option>
+                     <option data-countryCode="AZ" value="994">Azerbaijan ( +994)</option>
+                     <option data-countryCode="BS" value="1242">Bahamas ( +1242)</option>
+                     <option data-countryCode="BH" value="973">Bahrain ( +973)</option>
+                     <option data-countryCode="BD" value="880">Bangladesh ( +880)</opt ion>
+                     <option data-countryCode="BB" value="1246">Barbados ( +1246)</option>
+                     <option data-countryCode="BY" value="375">Belarus ( +375)</option>
+                     <option data-countryCode="BE" value="32">Belgium ( +32)</option>
+                     <option data-countryCode="BZ" value="501">Belize ( +501)</option>
+                     <option data-countryCode="BJ" value="229">Benin ( +229)</option>
+                     <option data-countryCode="BM" value="1441">Bermuda ( +1441)</option>
+                     <option data-countryCode="BT" value="975">Bhutan ( +975)</option>
+                     <option data-countryCode="BO" value="591">Bolivia ( +591)</option>
+                     <option data-countryCode="BA" value="387">Bosnia Herzegovina ( +387)</option>
+                     <option data-countryCode="BW" value="267">Botswana ( +267)</option>
+                     <option data-countryCode="BR" value="55">Brazil ( +55)</option>
+                     <option data-countryCode="BN" value="673">Brunei ( +673)</option>
+                     <option data-countryCode="BG" value="359">Bulgaria ( +359)</option>
+                     <option data-countryCode="BF" value="226">Burkina Faso ( +226)</option>
+                     <option data-countryCode="BI" value="257">Burundi ( +257)</option>
+                     <option data-countryCode="KH" value="855">Cambodia ( +855)</option>
+                     <option data-countryCode="CM" value="237">Cameroon ( +237)</option>
+                     <option data-countryCode="CA" value="1">Canada ( +1)</option>
+                     <option data-countryCode="CV" value="238">Cape Verde Islands ( +238)</option>
+                     <option data-countryCode="KY" value="1345">Cayman Islands ( +1345)</option>
+                     <option data-countryCode="CF" value="236">Central African Republic ( +236)</option>
+                     <option data-countryCode="CL" value="56">Chile ( +56)</option>
+                     <option data-countryCode="CN" value="86">China ( +86)</option>
+                     <option data-countryCode="CO" value="57">Colombia ( +57)</option>
+                     <option data-countryCode="KM" value="269">Comoros ( +269)</option>
+                     <option data-countryCode="CG" value="242">Congo ( +242)</option>
+                     <option data-countryCode="CK" value="682">Cook Islands ( +682)</option>
+                     <option data-countryCode="CR" value="506">Costa Rica ( +506)</option>
+                     <option data-countryCode="HR" value="385">Croatia ( +385)</option>
+                     <option data-countryCode="CU" value="53">Cuba ( +53)</option>
+                     <option data-countryCode="CY" value="90392">Cyprus North ( +90392)</option>
+                     <option data-countryCode="CY" value="357">Cyprus South ( +357)</option>
+                     <option data-countryCode="CZ" value="42">Czech Republic ( +42)</option>
+                     <option data-countryCode="DK" value="45">Denmark ( +45)</option>
+                     <option data-countryCode="DJ" value="253">Djibouti ( +253)</option>
+                     <option data-countryCode="DM" value="1809">Dominica ( +1809)</option>
+                     <option data-countryCode="DO" value="1809">Dominican Republic ( +1809)</option>
+                     <option data-countryCode="EC" value="593">Ecuador ( +593)</option>
+                     <option data-countryCode="EG" value="20">Egypt ( +20)</option>
+                     <option data-countryCode="SV" value="503">El Salvador ( +503)</option>
+                     <option data-countryCode="GQ" value="240">Equatorial Guinea ( +240)</option>
+                     <option data-countryCode="ER" value="291">Eritrea ( +291)</option>
+                     <option data-countryCode="EE" value="372">Estonia ( +372)</option>
+                     <option data-countryCode="ET" value="251">Ethiopia ( +251)</option>
+                     <option data-countryCode="FK" value="500">Falkland Islands ( +500)</option>
+                     <option data-countryCode="FO" value="298">Faroe Islands ( +298)</option>
+                     <option data-countryCode="FJ" value="679">Fiji ( +679)</option>
+                     <option data-countryCode="FI" value="358">Finland ( +358)</option>
+                     <option data-countryCode="FR" value="33">France ( +33)</option>
+                     <option data-countryCode="GF" value="594">French Guiana ( +594)</option>
+                     <option data-countryCode="PF" value="689">French Polynesia ( +689)</option>
+                     <option data-countryCode="GA" value="241">Gabon ( +241)</option>
+                     <option data-countryCode="GM" value="220">Gambia ( +220)</option>
+                     <option data-countryCode="GE" value="7880">Georgia ( +7880)</option>
+                     <option data-countryCode="DE" value="49">Germany ( +49)</option>
+                     <option data-countryCode="GH" value="233">Ghana ( +233)</option>
+                     <option data-countryCode="GI" value="350">Gibraltar ( +350)</option>
+                     <option data-countryCode="GR" value="30">Greece ( +30)</option>
+                     <option data-countryCode="GL" value="299">Greenland ( +299)</option>
+                     <option data-countryCode="GD" value="1473">Grenada ( +1473)</option>
+                     <option data-countryCode="GP" value="590">Guadeloupe ( +590)</option>
+                     <option data-countryCode="GU" value="671">Guam ( +671)</option>
+                     <option data-countryCode="GT" value="502">Guatemala ( +502)</option>
+                     <option data-countryCode="GN" value="224">Guinea ( +224)</option>
+                     <option data-countryCode="GW" value="245">Guinea - Bissau ( +245)</option>
+                     <option data-countryCode="GY" value="592">Guyana ( +592)</option>
+                     <option data-countryCode="HT" value="509">Haiti ( +509)</option>
+                     <option data-countryCode="HN" value="504">Honduras ( +504)</option>
+                     <option data-countryCode="HK" value="852">Hong Kong ( +852)</option>
+                     <option data-countryCode="HU" value="36">Hungary ( +36)</option>
+                     <option data-countryCode="IS" value="354">Iceland ( +354)</option>
+                     <option selected data-countryCode="IN" value="91">India ( +91)</option>
+                     <option data-countryCode="ID" value="62">Indonesia ( +62)</option>
+                     <option data-countryCode="IR" value="98">Iran ( +98)</option>
+                     <option data-countryCode="IQ" value="964">Iraq ( +964)</option>
+                     <option data-countryCode="IE" value="353">Ireland ( +353)</option>
+                     <option data-countryCode="IL" value="972">Israel ( +972)</option>
+                     <option data-countryCode="IT" value="39">Italy ( +39)</option>
+                     <option data-countryCode="JM" value="1876">Jamaica ( +1876)</option>
+                     <option data-countryCode="JP" value="81">Japan ( +81)</option>
+                     <option data-countryCode="JO" value="962">Jordan ( +962)</option>
+                     <option data-countryCode="KZ" value="7">Kazakhstan ( +7)</option>
+                     <option data-countryCode="KE" value="254">Kenya ( +254)</option>
+                     <option data-countryCode="KI" value="686">Kiribati ( +686)</option>
+                     <option data-countryCode="KP" value="850">Korea North ( +850)</option>
+                     <option data-countryCode="KR" value="82">Korea South ( +82)</option>
+                     <option data-countryCode="KW" value="965">Kuwait ( +965)</option>
+                     <option data-countryCode="KG" value="996">Kyrgyzstan ( +996)</option>
+                     <option data-countryCode="LA" value="856">Laos ( +856)</option>
+                     <option data-countryCode="LV" value="371">Latvia ( +371)</option>
+                     <option data-countryCode="LB" value="961">Lebanon ( +961)</option>
+                     <option data-countryCode="LS" value="266">Lesotho ( +266)</option>
+                     <option data-countryCode="LR" value="231">Liberia ( +231)</option>
+                     <option data-countryCode="LY" value="218">Libya ( +218)</option>
+                     <option data-countryCode="LI" value="417">Liechtenstein ( +417)</option>
+                     <option data-countryCode="LT" value="370">Lithuania ( +370)</option>
+                     <option data-countryCode="LU" value="352">Luxembourg ( +352)</option>
+                     <option data-countryCode="MO" value="853">Macao ( +853)</option>
+                     <option data-countryCode="MK" value="389">Macedonia ( +389)</option>
+                     <option data-countryCode="MG" value="261">Madagascar ( +261)</option>
+                     <option data-countryCode="MW" value="265">Malawi ( +265)</option>
+                     <option data-countryCode="MY" value="60">Malaysia ( +60)</option>
+                     <option data-countryCode="MV" value="960">Maldives ( +960)</option>
+                     <option data-countryCode="ML" value="223">Mali ( +223)</option>
+                     <option data-countryCode="MT" value="356">Malta ( +356)</option>
+                     <option data-countryCode="MH" value="692">Marshall Islands ( +692)</option>
+                     <option data-countryCode="MQ" value="596">Martinique ( +596)</option>
+                     <option data-countryCode="MR" value="222">Mauritania ( +222)</option>
+                     <option data-countryCode="YT" value="269">Mayotte ( +269)</option>
+                     <option data-countryCode="MX" value="52">Mexico ( +52)</option>
+                     <option data-countryCode="FM" value="691">Micronesia ( +691)</option>
+                     <option data-countryCode="MD" value="373">Moldova ( +373)</option>
+                     <option data-countryCode="MC" value="377">Monaco ( +377)</option>
+                     <option data-countryCode="MN" value="976">Mongolia ( +976)</option>
+                     <option data-countryCode="MS" value="1664">Montserrat ( +1664)</option>
+                     <option data-countryCode="MA" value="212">Morocco ( +212)</option>
+                     <option data-countryCode="MZ" value="258">Mozambique ( +258)</option>
+                     <option data-countryCode="MN" value="95">Myanmar ( +95)</option>
+                     <option data-countryCode="NA" value="264">Namibia ( +264)</option>
+                     <option data-countryCode="NR" value="674">Nauru ( +674)</option>
+                     <option data-countryCode="NP" value="977">Nepal ( +977)</option>
+                     <option data-countryCode="NL" value="31">Netherlands ( +31)</option>
+                     <option data-countryCode="NC" value="687">New Caledonia ( +687)</option>
+                     <option data-countryCode="NZ" value="64">New Zealand ( +64)</option>
+                     <option data-countryCode="NI" value="505">Nicaragua ( +505)</option>
+                     <option data-countryCode="NE" value="227">Niger ( +227)</option>
+                     <option data-countryCode="NG" value="234">Nigeria ( +234)</option>
+                     <option data-countryCode="NU" value="683">Niue ( +683)</option>
+                     <option data-countryCode="NF" value="672">Norfolk Islands ( +672)</option>
+                     <option data-countryCode="NP" value="670">Northern Marianas ( +670)</option>
+                     <option data-countryCode="NO" value="47">Norway ( +47)</option>
+                     <option data-countryCode="OM" value="968">Oman ( +968)</option>
+                     <option data-countryCode="PW" value="680">Palau ( +680)</option>
+                     <option data-countryCode="PA" value="507">Panama ( +507)</option>
+                     <option data-countryCode="PG" value="675">Papua New Guinea ( +675)</option>
+                     <option data-countryCode="PY" value="595">Paraguay ( +595)</option>
+                     <option data-countryCode="PE" value="51">Peru ( +51)</option>
+                     <option data-countryCode="PH" value="63">Philippines ( +63)</option>
+                     <option data-countryCode="PL" value="48">Poland ( +48)</option>
+                     <option data-countryCode="PT" value="351">Portugal ( +351)</option>
+                     <option data-countryCode="PR" value="1787">Puerto Rico ( +1787)</option>
+                     <option data-countryCode="QA" value="974">Qatar ( +974)</option>
+                     <option data-countryCode="RE" value="262">Reunion ( +262)</option>
+                     <option data-countryCode="RO" value="40">Romania ( +40)</option>
+                     <option data-countryCode="RU" value="7">Russia ( +7)</option>
+                     <option data-countryCode="RW" value="250">Rwanda ( +250)</option>
+                     <option data-countryCode="SM" value="378">San Marino ( +378)</option>
+                     <option data-countryCode="ST" value="239">Sao Tome &amp; Principe ( +239)</option>
+                     <option data-countryCode="SA" value="966">Saudi Arabia ( +966)</option>
+                     <option data-countryCode="SN" value="221">Senegal ( +221)</option>
+                     <option data-countryCode="CS" value="381">Serbia ( +381)</option>
+                     <option data-countryCode="SC" value="248">Seychelles ( +248)</option>
+                     <option data-countryCode="SL" value="232">Sierra Leone ( +232)</option>
+                     <option data-countryCode="SG" value="65">Singapore ( +65)</option>
+                     <option data-countryCode="SK" value="421">Slovak Republic ( +421)</option>
+                     <option data-countryCode="SI" value="386">Slovenia ( +386)</option>
+                     <option data-countryCode="SB" value="677">Solomon Islands ( +677)</option>
+                     <option data-countryCode="SO" value="252">Somalia ( +252)</option>
+                     <option data-countryCode="ZA" value="27">South Africa ( +27)</option>
+                     <option data-countryCode="ES" value="34">Spain ( +34)</option>
+                     <option data-countryCode="LK" value="94">Sri Lanka ( +94)</option>
+                     <option data-countryCode="SH" value="290">St. Helena ( +290)</option>
+                     <option data-countryCode="KN" value="1869">St. Kitts ( +1869)</option>
+                     <option data-countryCode="SC" value="1758">St. Lucia ( +1758)</option>
+                     <option data-countryCode="SD" value="249">Sudan ( +249)</option>
+                     <option data-countryCode="SR" value="597">Suriname ( +597)</option>
+                     <option data-countryCode="SZ" value="268">Swaziland ( +268)</option>
+                     <option data-countryCode="SE" value="46">Sweden ( +46)</option>
+                     <option data-countryCode="CH" value="41">Switzerland ( +41)</option>
+                     <option data-countryCode="SI" value="963">Syria ( +963)</option>
+                     <option data-countryCode="TW" value="886">Taiwan ( +886)</option>
+                     <option data-countryCode="TJ" value="7">Tajikstan ( +7)</option>
+                     <option data-countryCode="TH" value="66">Thailand ( +66)</option>
+                     <option data-countryCode="TG" value="228">Togo ( +228)</option>
+                     <option data-countryCode="TO" value="676">Tonga ( +676)</option>
+                     <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago ( +1868)</option>
+                     <option data-countryCode="TN" value="216">Tunisia ( +216)</option>
+                     <option data-countryCode="TR" value="90">Turkey ( +90)</option>
+                     <option data-countryCode="TM" value="7">Turkmenistan ( +7)</option>
+                     <option data-countryCode="TM" value="993">Turkmenistan ( +993)</option>
+                     <option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands ( +1649)</option>
+                     <option data-countryCode="TV" value="688">Tuvalu ( +688)</option>
+                     <option data-countryCode="UG" value="256">Uganda ( +256)</option>
+                     <option data-countryCode="GB" value="44">UK ( +44)</option>
+                     <option data-countryCode="UA" value="380">Ukraine ( +380)</option>
+                     <option data-countryCode="AE" value="971">United Arab Emirates ( +971)</option>
+                     <option data-countryCode="UY" value="598">Uruguay ( +598)</option>
+                     <option data-countryCode="US" value="1">USA ( +1)</option>
+                     <option data-countryCode="UZ" value="7">Uzbekistan ( +7)</option>
+                     <option data-countryCode="VU" value="678">Vanuatu ( +678)</option>
+                     <option data-countryCode="VA" value="379">Vatican City ( +379)</option>
+                     <option data-countryCode="VE" value="58">Venezuela ( +58)</option>
+                     <option data-countryCode="VN" value="84">Vietnam ( +84)</option>
+                     <option data-countryCode="VG" value="84">Virgin Islands - British ( +1284)</option>
+                     <option data-countryCode="VI" value="84">Virgin Islands - US ( +1340)</option>
+                     <option data-countryCode="WF" value="681">Wallis &amp; Futuna ( +681)</option>
+                     <option data-countryCode="YE" value="969">Yemen (North)( +969)</option>
+                     <option data-countryCode="YE" value="967">Yemen (South)( +967)</option>
+                     <option data-countryCode="ZM" value="260">Zambia ( +260)</option>
+                     <option data-countryCode="ZW" value="263">Zimbabwe ( +263)</option>
+
+    
+                  </select>
+               </div>
+               <div>
+                  <input type="text" class="form-control" placeholder="Type Number" id="newPhone" name="newPhone" value="91">
+               </div>
+               <div style="display: flex;
+               margin-top: 10px;
+               margin-left: 140px;
+               column-gap: 18px;" id="addNewOkay">
+                  <button id="addNewOkay2">Cancel</button>
+                  <button id="addNewOkay1" >Okay</button>
+                  
+               </div>
+            </div>
+         </div>
+     <div class="tab" >
+      <input type="radio" id="tab-1" name="tab-group-1" > 
+      <label  class="uppertablabel" for="tab-1" >Followup</label>
+      <br>
+      <div class="content" id="scheduledList" style="padding: 0px 0px;">
+        
+           
+         
+         <div class="tabs" style="margin-top: 0px;">
+            <div class="tab">
+               <input type="radio" id = "tab-4" name="tab-group-2" checked>
+               <label  id="allFollowup" class="followupLabels" for="tab-4" >All</label>
+               <div class="followup-content" id="followup-Content">
+                  <div id="searchTheCustomer" style="display: block;">
+                     <input id="searchinput" autocomplete="off" style="
+                       position: absolute;
+    border: 1px solid #FFFFFF;
+    margin-top: 12px;
+    height: 28px;
+    margin-left: 5%;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
+    width: 88%;
+    border-radius: 18px;
+                        " type="text" value=""  placeholder="Search">
+                     <img class="filterIcons" role="button" title="Apply Filter" id="filterIcon"src="" alt=""  >
+                     <button class="removefilter">x</button>
+                     <div id = filterBasis style="display: flex;
+                        height: 50px;
+                     
+                        margin-top: 50px;
+                        justify-content: space-evenly;">
+                        <div class="filterInputSection">
+                           
+                           <input class ="filterinput" id="filterTagsInput" autocomplete="off" type="text" placeholder="Labels"> 
+                           <div id="taglistcheckbox" class="Checklist" >
+                              <div>
+                                 <input type="checkbox"  name="tagcheck">
+                                 <label for="tagcheck">Payment</label>
+                              </div>
+                              <div>
+                                 <input type="checkbox"  name="tagcheck1">
+                                 <label for="tagcheck1">Paid</label>
+                              </div>
+                              <div>
+                                 <input type="checkbox"  name="tagcheck2">
+                                 <label for="tagcheck2">Done</label>
+                              </div>
+                           </div>
+                        </div>
+                        <div>
+                           <input class ="filterinput" id="filterLevelInput" list="interestlevellist" type="text" placeholder="Interest">
+                           <datalist id="customertaglist">
+                              <input type="checkbox" name="bike" value="Tag" />
+                              <label for="bike"> I have a bike</label>
+                              <br />
+                            </datalist>
+                            <datalist id="interestlevellist">
+                              <option>High</option>
+                              <option>Very High</option>
+                              <option>Low</option>
+                              <option>Very Low</option>
+                            </datalist>
+                        </div>
+                     </div>
+                  </div>
+                  <div >
+                  </div>
+                  <div id="customer-list" style="position: absolute;margin-top:0px" >
+                  </div>
+                 <div style="display: none;" id="overlayObject">
+
+                 
+                  
+                 </div>
+               
+                  <textarea  style="font-size: 1rem;display: none;"  placeholder="Type your message here..." id="messageTextFollowup" required></textarea>
+              
+                 
+                
+                  <div class="sendMessageList">
+                    <!-- <p id="countOfCustomer"></p> -->
+                    <button id ="sendMessageAll" style="z-index: 1100;" >Send Message</button>
+                   <!-- <img role="button" id ="sendMessageAll" src="" alt="Send Message"> -->
+                  </div>
+               </div>
+            </div>
+            <div class="tab">
+               <input type="radio"  id = "tab-5" name="tab-group-2">
+               <label id="pendingFollowupTitle" class="followupLabels"  for="tab-5" >Past</label>
+               <div class="followup-content">
+                  <div id="searchTheCustomer2" style="display: block;" >
+                     <input id="searchinput2" autocomplete="off" style="
+                                         position: absolute;
+    border: 1px solid #FFFFFF;
+    margin-top: 12px;
+    height: 28px;
+    margin-left: 5%;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
+    width: 88%;
+    border-radius: 18px;
+                        " type="text" value=""  placeholder="Search">
+                     <img role="button" title="Apply Filters" id="filterIcon2"src="" alt="" >
+                     <button  class="removefilter">x</button>
+                     <div id = filterBasis2 style="display: flex;
+                        height: 50px;
+                      
+                        margin-top: 50px;
+                        justify-content: space-evenly;">
+                        <div class="filterInputSection">
+                           <input class ="filterinput" id="filterTagsInput2" autocomplete="off"  type="text" placeholder="Labels">   
+                           <div id="taglistcheckbox2" class="Checklist" >
+                              <div>
+                                 <input type="checkbox"  name="tagcheck">
+                                 <label for="tagcheck">Payment</label>
+                              </div>
+                              <div>
+                                 <input type="checkbox"  name="tagcheck1">
+                                 <label for="tagcheck1">Paid</label>
+                              </div>
+                              <div>
+                                 <input type="checkbox"  name="tagcheck2">
+                                 <label for="tagcheck2">Done</label>
+                              </div>
+                           </div>
+                        </div>
+                        <input class ="filterinput" id="filterLevelInput2" list="interestlevellist" type="text" placeholder="Interest"> 
+                     </div>
+                  </div>
+                  <div >
+                  </div>
+                  <div id="customer-pending-list" style="position: absolute; top: 0px;">
+                  </div>
+               </div>
+            </div>
+            <div class="tab">
+               <input type='radio' id = 'tab-8' name='tab-group-2' >
+                <label  id='failedMsg' class='followupLabels' for='tab-8' >Failed</label>
+                <div class="followup-content">
+                  <div id = "failedMsgList" style="position: absolute; top: 0px;"></div>
+                </div>
+                
+            </div>
+         </div>
+      </div>
+   </div>
+  <div class="tab" style="display: none;" >
+     <input type="radio" id="tab-3" name="tab-group-1"> <label  class="uppertablabel"  for="tab-3" > Message </label>
+     <div class="content">
+        <p style="font-weight: 600;" class="form-label">Upload Excel</p>
+        <div class="row">
+           <div class="col-9">
+              <input style="font-size: 0.8rem;" class="form-control" type="file" id="fileUpload">
+           </div>
+           <div class="col-3"> 
+              <a target= "_blank" style="position: absolute;
+                 margin-top: -29px;
+                 font-size: 12px;
+                 width: 103px;
+                 margin-left: -31px;
+                 background: mediumaquamarine;
+                 color: white;
+                 border-radius: 22px;
+                 text-align: center;" href="https://drive.google.com/file/d/1knjvqq8rBL6jsyXpQzMPNdBnOsleP13f/view?usp=sharing">Sample Format</a>
+              <input type="button" id="upload" value="Upload" />
+           </div>
+        </div>
+        <div id="file-selected" class="mt-1 text-success text-center"></div>
+        <div id="file-uploaded" class="mt-1 text-success text-center"></div>
+        <div style="color: blue;">
+           <center style="color: black;
+              font-family: 'Poppins';
+              font-size: 11px;
+              font-weight: 500;
+              margin-left: -14px;">
+           Upload a excel sheet with column name "Phone" containing the numbers you want to send messages to
+           <center>
+        </div>
+        <center style=" font-weight: 600;"class="mt-2 mb-2">OR</center>
+        <p  style="font-size: 13px;
+           font-weight: 600;
+           margin-top: 27px;" class="form-label">Enter a Mobile Number</p>
+        <div class="row mb-2">
+           <div class="col-5">
+              <select style="font-size: 0.8rem;" class="form-control" name="flag" id="flag">
+               <option data-countryCode="DZ" value="213">Algeria (+213 )</option>
+               <option data-countryCode="AD" value="376">Andorra (+376 )</option>
+               <option data-countryCode="AO" value="244">Angola (+244 )</option>
+               <option data-countryCode="AI" value="1264">Anguilla (+1264 )</option>
+               <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268 )</option>
+               <option data-countryCode="AR" value="54">Argentina (+54 )</option>
+               <option data-countryCode="AM" value="374">Armenia (+374 )</option>
+               <option data-countryCode="AW" value="297">Aruba (+297 )</option>
+               <option data-countryCode="AU" value="61">Australia (+61 )</option>
+               <option data-countryCode="AT" value="43">Austria (+43 )</option>
+               <option data-countryCode="AZ" value="994">Azerbaijan (+994 )</option>
+               <option data-countryCode="BS" value="1242">Bahamas (+1242 )</option>
+               <option data-countryCode="BH" value="973">Bahrain (+973 )</option>
+               <option data-countryCode="BD" value="880">Bangladesh (+880 )</option>
+               <option data-countryCode="BB" value="1246">Barbados (+1246 )</option>
+               <option data-countryCode="BY" value="375">Belarus (+375 )</option>
+               <option data-countryCode="BE" value="32">Belgium (+32 )</option>
+               <option data-countryCode="BZ" value="501">Belize (+501 )</option>
+               <option data-countryCode="BJ" value="229">Benin (+229 )</option>
+               <option data-countryCode="BM" value="1441">Bermuda (+1441 )</option>
+               <option data-countryCode="BT" value="975">Bhutan (+975 )</option>
+               <option data-countryCode="BO" value="591">Bolivia (+591 )</option>
+               <option data-countryCode="BA" value="387">Bosnia Herzegovina (+387 )</option>
+               <option data-countryCode="BW" value="267">Botswana (+267 )</option>
+               <option data-countryCode="BR" value="55">Brazil (+55 )</option>
+               <option data-countryCode="BN" value="673">Brunei (+673 )</option>
+               <option data-countryCode="BG" value="359">Bulgaria (+359 )</option>
+               <option data-countryCode="BF" value="226">Burkina Faso (+226 )</option>
+               <option data-countryCode="BI" value="257">Burundi (+257 )</option>
+               <option data-countryCode="KH" value="855">Cambodia (+855 )</option>
+               <option data-countryCode="CM" value="237">Cameroon (+237 )</option>
+               <option data-countryCode="CA" value="1">Canada (+1 )</option>
+               <option data-countryCode="CV" value="238">Cape Verde Islands (+238 )</option>
+               <option data-countryCode="KY" value="1345">Cayman Islands (+1345 )</option>
+               <option data-countryCode="CF" value="236">Central African Republic (+236 )</option>
+               <option data-countryCode="CL" value="56">Chile (+56 )</option>
+               <option data-countryCode="CN" value="86">China (+86 )</option>
+               <option data-countryCode="CO" value="57">Colombia (+57 )</option>
+               <option data-countryCode="KM" value="269">Comoros (+269 )</option>
+               <option data-countryCode="CG" value="242">Congo (+242 )</option>
+               <option data-countryCode="CK" value="682">Cook Islands (+682 )</option>
+               <option data-countryCode="CR" value="506">Costa Rica (+506 )</option>
+               <option data-countryCode="HR" value="385">Croatia (+385 )</option>
+               <option data-countryCode="CU" value="53">Cuba (+53 )</option>
+               <option data-countryCode="CY" value="90392">Cyprus North (+90392 )</option>
+               <option data-countryCode="CY" value="357">Cyprus South (+357 )</option>
+               <option data-countryCode="CZ" value="42">Czech Republic (+42 )</option>
+               <option data-countryCode="DK" value="45">Denmark (+45 )</option>
+               <option data-countryCode="DJ" value="253">Djibouti (+253 )</option>
+               <option data-countryCode="DM" value="1809">Dominica (+1809 )</option>
+               <option data-countryCode="DO" value="1809">Dominican Republic (+1809 )</option>
+               <option data-countryCode="EC" value="593">Ecuador (+593 )</option>
+               <option data-countryCode="EG" value="20">Egypt (+20 )</option>
+               <option data-countryCode="SV" value="503">El Salvador (+503 )</option>
+               <option data-countryCode="GQ" value="240">Equatorial Guinea (+240 )</option>
+               <option data-countryCode="ER" value="291">Eritrea (+291 )</option>
+               <option data-countryCode="EE" value="372">Estonia (+372 )</option>
+               <option data-countryCode="ET" value="251">Ethiopia (+251 )</option>
+               <option data-countryCode="FK" value="500">Falkland Islands (+500 )</option>
+               <option data-countryCode="FO" value="298">Faroe Islands (+298 )</option>
+               <option data-countryCode="FJ" value="679">Fiji (+679 )</option>
+               <option data-countryCode="FI" value="358">Finland (+358 )</option>
+               <option data-countryCode="FR" value="33">France (+33 )</option>
+               <option data-countryCode="GF" value="594">French Guiana (+594 )</option>
+               <option data-countryCode="PF" value="689">French Polynesia (+689 )</option>
+               <option data-countryCode="GA" value="241">Gabon (+241 )</option>
+               <option data-countryCode="GM" value="220">Gambia (+220 )</option>
+               <option data-countryCode="GE" value="7880">Georgia (+7880 )</option>
+               <option data-countryCode="DE" value="49">Germany (+49 )</option>
+               <option data-countryCode="GH" value="233">Ghana (+233 )</option>
+               <option data-countryCode="GI" value="350">Gibraltar (+350 )</option>
+               <option data-countryCode="GR" value="30">Greece (+30 )</option>
+               <option data-countryCode="GL" value="299">Greenland (+299 )</option>
+               <option data-countryCode="GD" value="1473">Grenada (+1473 )</option>
+               <option data-countryCode="GP" value="590">Guadeloupe (+590 )</option>
+               <option data-countryCode="GU" value="671">Guam (+671 )</option>
+               <option data-countryCode="GT" value="502">Guatemala (+502 )</option>
+               <option data-countryCode="GN" value="224">Guinea (+224 )</option>
+               <option data-countryCode="GW" value="245">Guinea - Bissau (+245 )</option>
+               <option data-countryCode="GY" value="592">Guyana (+592 )</option>
+               <option data-countryCode="HT" value="509">Haiti (+509 )</option>
+               <option data-countryCode="HN" value="504">Honduras (+504 )</option>
+               <option data-countryCode="HK" value="852">Hong Kong (+852 )</option>
+               <option data-countryCode="HU" value="36">Hungary (+36 )</option>
+               <option data-countryCode="IS" value="354">Iceland (+354 )</option>
+               <option  selected data-countryCode="IN" value="91">India (+91 )</option>
+               <option data-countryCode="ID" value="62">Indonesia (+62 )</option>
+               <option data-countryCode="IR" value="98">Iran (+98 )</option>
+               <option data-countryCode="IQ" value="964">Iraq (+964 )</option>
+               <option data-countryCode="IE" value="353">Ireland (+353 )</option>
+               <option data-countryCode="IL" value="972">Israel (+972 )</option>
+               <option data-countryCode="IT" value="39">Italy (+39 )</option>
+               <option data-countryCode="JM" value="1876">Jamaica (+1876 )</option>
+               <option data-countryCode="JP" value="81">Japan (+81 )</option>
+               <option data-countryCode="JO" value="962">Jordan (+962 )</option>
+               <option data-countryCode="KZ" value="7">Kazakhstan (+7 )</option>
+               <option data-countryCode="KE" value="254">Kenya (+254 )</option>
+               <option data-countryCode="KI" value="686">Kiribati (+686 )</option>
+               <option data-countryCode="KP" value="850">Korea North (+850 )</option>
+               <option data-countryCode="KR" value="82">Korea South (+82 )</option>
+               <option data-countryCode="KW" value="965">Kuwait (+965 )</option>
+               <option data-countryCode="KG" value="996">Kyrgyzstan (+996 )</option>
+               <option data-countryCode="LA" value="856">Laos (+856 )</option>
+               <option data-countryCode="LV" value="371">Latvia (+371 )</option>
+               <option data-countryCode="LB" value="961">Lebanon (+961 )</option>
+               <option data-countryCode="LS" value="266">Lesotho (+266 )</option>
+               <option data-countryCode="LR" value="231">Liberia (+231 )</option>
+               <option data-countryCode="LY" value="218">Libya (+218 )</option>
+               <option data-countryCode="LI" value="417">Liechtenstein (+417 )</option>
+               <option data-countryCode="LT" value="370">Lithuania (+370 )</option>
+               <option data-countryCode="LU" value="352">Luxembourg (+352 )</option>
+               <option data-countryCode="MO" value="853">Macao (+853 )</option>
+               <option data-countryCode="MK" value="389">Macedonia (+389 )</option>
+               <option data-countryCode="MG" value="261">Madagascar (+261 )</option>
+               <option data-countryCode="MW" value="265">Malawi (+265 )</option>
+               <option data-countryCode="MY" value="60">Malaysia (+60 )</option>
+               <option data-countryCode="MV" value="960">Maldives (+960 )</option>
+               <option data-countryCode="ML" value="223">Mali (+223 )</option>
+               <option data-countryCode="MT" value="356">Malta (+356 )</option>
+               <option data-countryCode="MH" value="692">Marshall Islands (+692 )</option>
+               <option data-countryCode="MQ" value="596">Martinique (+596 )</option>
+               <option data-countryCode="MR" value="222">Mauritania (+222 )</option>
+               <option data-countryCode="YT" value="269">Mayotte (+269 )</option>
+               <option data-countryCode="MX" value="52">Mexico (+52 )</option>
+               <option data-countryCode="FM" value="691">Micronesia (+691 )</option>
+               <option data-countryCode="MD" value="373">Moldova (+373 )</option>
+               <option data-countryCode="MC" value="377">Monaco (+377 )</option>
+               <option data-countryCode="MN" value="976">Mongolia (+976 )</option>
+               <option data-countryCode="MS" value="1664">Montserrat (+1664 )</option>
+               <option data-countryCode="MA" value="212">Morocco (+212 )</option>
+               <option data-countryCode="MZ" value="258">Mozambique (+258 )</option>
+               <option data-countryCode="MN" value="95">Myanmar (+95 )</option>
+               <option data-countryCode="NA" value="264">Namibia (+264 )</option>
+               <option data-countryCode="NR" value="674">Nauru (+674 )</option>
+               <option data-countryCode="NP" value="977">Nepal (+977 )</option>
+               <option data-countryCode="NL" value="31">Netherlands (+31 )</option>
+               <option data-countryCode="NC" value="687">New Caledonia (+687 )</option>
+               <option data-countryCode="NZ" value="64">New Zealand (+64 )</option>
+               <option data-countryCode="NI" value="505">Nicaragua (+505 )</option>
+               <option data-countryCode="NE" value="227">Niger (+227 )</option>
+               <option data-countryCode="NG" value="234">Nigeria (+234 )</option>
+               <option data-countryCode="NU" value="683">Niue (+683 )</option>
+               <option data-countryCode="NF" value="672">Norfolk Islands (+672 )</option>
+               <option data-countryCode="NP" value="670">Northern Marianas (+670 )</option>
+               <option data-countryCode="NO" value="47">Norway (+47 )</option>
+               <option data-countryCode="OM" value="968">Oman (+968 )</option>
+               <option data-countryCode="PW" value="680">Palau (+680 )</option>
+               <option data-countryCode="PA" value="507">Panama (+507 )</option>
+               <option data-countryCode="PG" value="675">Papua New Guinea (+675 )</option>
+               <option data-countryCode="PY" value="595">Paraguay (+595)</option>
+               <option data-countryCode="PE" value="51">Peru (+51 )</option>
+               <option data-countryCode="PH" value="63">Philippines (+63 )</option>
+               <option data-countryCode="PL" value="48">Poland (+48 ) </option>
+               <option data-countryCode="PT" value="351">Portugal (+351 )</option>
+               <option data-countryCode="PR" value="1787">Puerto Rico (+1787 )</option>
+               <option data-countryCode="QA" value="974">Qatar (+974 )</option>
+               <option data-countryCode="RE" value="262">Reunion (+262 )</option>
+               <option data-countryCode="RO" value="40">Romania (+40 )</option>
+               <option data-countryCode="RU" value="7">Russia (+7 )</option>
+               <option data-countryCode="RW" value="250">Rwanda (+250 )</option>
+               <option data-countryCode="SM" value="378">San Marino (+378 )</option>
+               <option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239 )</option>
+               <option data-countryCode="SA" value="966">Saudi Arabia (+966 )</option>
+               <option data-countryCode="SN" value="221">Senegal (+221 )</option>
+               <option data-countryCode="CS" value="381">Serbia (+381 )</option>
+               <option data-countryCode="SC" value="248">Seychelles (+248 )</option>
+               <option data-countryCode="SL" value="232">Sierra Leone (+232 )</option>
+               <option data-countryCode="SG" value="65">Singapore (+65 )</option>
+               <option data-countryCode="SK" value="421">Slovak Republic (+421 )</option>
+               <option data-countryCode="SI" value="386">Slovenia (+386 )</option>
+               <option data-countryCode="SB" value="677">Solomon Islands (+677 )</option>
+               <option data-countryCode="SO" value="252">Somalia (+252 )</option>
+               <option data-countryCode="ZA" value="27">South Africa (+27 )</option>
+               <option data-countryCode="ES" value="34">Spain (+34 ) </option>
+               <option data-countryCode="LK" value="94">Sri Lanka (+94 )</option>
+               <option data-countryCode="SH" value="290">St. Helena (+290 )</option>
+               <option data-countryCode="KN" value="1869">St. Kitts (+1869 )</option>
+               <option data-countryCode="SC" value="1758">St. Lucia (+1758 )</option>
+               <option data-countryCode="SD" value="249">Sudan (+249 )</option>
+               <option data-countryCode="SR" value="597">Suriname (+597 )</option>
+               <option data-countryCode="SZ" value="268">Swaziland (+268 )</option>
+               <option data-countryCode="SE" value="46">Sweden (+46 )</option>
+               <option data-countryCode="CH" value="41">Switzerland (+41 )</option>
+               <option data-countryCode="SI" value="963">Syria (+963 )</option>
+               <option data-countryCode="TW" value="886">Taiwan (+886 )</option>
+               <option data-countryCode="TJ" value="7">Tajikstan (+7 )</option>
+               <option data-countryCode="TH" value="66">Thailand (+66 )</option>
+               <option data-countryCode="TG" value="228">Togo (+228 )</option>
+               <option data-countryCode="TO" value="676">Tonga (+676 )</option>
+               <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago (+1868 )</option>
+               <option data-countryCode="TN" value="216">Tunisia (+216 )</option>
+               <option data-countryCode="TR" value="90">Turkey (+90 )</option>
+               <option data-countryCode="TM" value="7">Turkmenistan (+7 )</option>
+               <option data-countryCode="TM" value="993">Turkmenistan (+993 )</option>
+               <option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands (+1649 )</option>
+               <option data-countryCode="TV" value="688">Tuvalu (+688 )</option>
+               <option data-countryCode="UG" value="256">Uganda (+256 )</option>
+             <option data-countryCode="GB" value="44">UK (+44 )</option> 
+               <option data-countryCode="UA" value="380">Ukraine (+380 )</option>
+               <option data-countryCode="AE" value="971">United Arab Emirates (+971 )</option>
+               <option data-countryCode="UY" value="598">Uruguay (+598 )</option>
+             <option data-countryCode="US" value="1">USA (+1 ) </option>
+               <option data-countryCode="UZ" value="7">Uzbekistan (+7 ) </option>
+               <option data-countryCode="VU" value="678">Vanuatu (+678 ) </option>
+               <option data-countryCode="VA" value="379">Vatican City (+379 )</option>
+               <option data-countryCode="VE" value="58">Venezuela (+58 )</option>
+               <option data-countryCode="VN" value="84">Vietnam (+84 )</option>
+               <option data-countryCode="VG" value="84">Virgin Islands - British (+1284 )</option>
+               <option data-countryCode="VI" value="84">Virgin Islands - US (+1340 )</option>
+               <option data-countryCode="WF" value="681">Wallis &amp; Futuna (+681 )</option>
+               <option data-countryCode="YE" value="969">Yemen (North)(+969 )</option>
+               <option data-countryCode="YE" value="967">Yemen (South)(+967 )</option>
+               <option data-countryCode="ZM" value="260">Zambia (+260 )</option>
+
+              </select>
+           </div>
+           <div class="col-7">
+              <input type="text" class="form-control" placeholder="Type Number" id="phone" style="height: 33px;" name="phone" value="91">
+           </div>
+          
+        </div>
+        <hr>
+        <p class="form-label">Message </p>
+        <textarea  style="font-size: 0.8rem;" class="form-control" placeholder="Type your message here..." id="message" required></textarea>
+        <button id="injectMessage" >Send Message</button>
+        <div style="color: palevioletred;
+           font-weight: 600;
+           margin-top: -14px;
+           margin-left: -4px;">Caution: Sending Bulk Messages to <strong>UNKNOWN</strong> numbers can ban your number permanently</div>
+     </div>
+  </div>
+  
+     </div>
+  </div>
+
+
+  <div id="PremiumPopup" style="z-index: 9999; display: none;  height: 80% ;" height: fit-content ;  >
+
+
+      <div class="Pricing" style="font-family: 'Lato', sans-serif; margin-top: 15px;height: 100%;background-repeat: no-repeat;background-attachment: fixed; background-size: cover; display: flow-root;">
+ 
+     
+       <div style="display: flex; align-content: center;justify-content: center;">
+          <h2 style=" font-family: 'Poppins', sans-serif; font-size: 38px; text-align: center;margin-left: 15%;flex-grow: 1;">Subscription Plans</h2>
+            <div id="help_div" class="help_div" style="display: flex;align-items: center;justify-content: center;margin-right: 20px;">
+               <img  style="height: 40px;" src="https://img.icons8.com/color/48/000000/whatsapp--v5.png"/>
+               <h3 style="font-size: 20px; margin-left: 4px;"> Whatsapp us</h3>
+
+            </div>
+       </div>
+       
+       <div style="display: flex; justify-content: center; font-size: 26px; margin-bottom: 10px; transition: all 0.3s ease 0s;">
+         <div style="display: flex; border: 1px solid rgb(84, 111, 255); border-radius: 6px; justify-content: center; margin-bottom: 16px; padding: 2px; width: 208px; height: 46px; font-size: 14px;">
+             
+            <div role="group" id="monthly_button"  style="color: rgb(84, 111, 255); border-radius: 6px;background: rgb(255, 255, 255); height: 38px; width: 103px; align-items: center; display: flex; justify-content: center; margin-right: 2.5px;" type="button" value ="monthly" aria_pressed="true">
+                <span>
+                   <span style="text-align: right;">Monthly</span>
+                </span>
+                <span></span>
+     
+             </div>
+             
+             <div id="yearly_button" role="group" type="button" style=" color: rgb(255, 255, 255);  background: rgb(84, 111, 255); border-radius: 6px; padding: 5px 5px 5px 15px;  width: 93px; height: 38px; display: flex; align-items: center; margin-left: 2.5px; justify-content: center;" value ="Yearly" aria_pressed="true">
+                <span>
+                   <span>Yearly</span>
+                </span>
+                <span></span>
+     
+             </div>
+          </div>
+          </div>
+  
+       <div class="container"  id="card_container" style="display: flex; align-items: center; justify-content: center;">
+        
+ 
+         </div>
+        
+       </div>
+    </div>
+
+
+
+
+
+   
+    <div style="position: absolute; padding: 17px;top: 1%;left: 20%;">
+      <p style="font-weight: bolder;margin: 0.3rem;text-align: center;">
+         Only 1 Message at a Time
+         3 Followups and Bulk Message to only 5 people.</p>
+         <span style="background: #ffbb74;
+         padding-left: 20px;
+         padding-right: 20px;
+         border-radius: 10px;">Go premium to choose our plan and enjoy Unlimited feautures.</span>
+      
+
+     </div>
+
+<a  id="premiumButton" href="" style="position: absolute;
+    position: absolute;
+    top: 92%;
+    left: 38%;
+    border: 0px;
+    background: #0074fc;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    padding: 3px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: larger;">Go Premium</a>
+  </div>
+  
+  <!-- campian -->
+
+
+
+
+  <!-- campain -->
+  
+  <div id="updatePopup" style="display: none;" >
+   <div style="position: absolute; padding: 17px;">
+    <p style="font-weight: bolder; font-size: 20px;">Downlaod our latest Version!</p>
+<span style="    padding: 2px;
+display: none;
+height: fit-content;
+width: 181px;
+text-align: center;
+position: absolute;
+background: #000000a6;
+color: white;
+border-radius: 16px;">We strongly recommend to download the update to use the feautures!</span>
+   </div>
+<img id="updateImg" style="   
+  height: 100%;
+  width: 81%;
+  margin-left: 130px;" src="" alt="img">
+<a target="_blank" id="updateButton" href="https://chrome.google.com/webstore/detail/whatzapp-schedule-message/clgficggccelgifppbcaepjdkklfcefd/related" style="position: absolute;
+    position: absolute;
+    top: 90%;
+    left: 37%;
+    padding: 3px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 0px;
+    background: #0074fc;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    font-size: 20px;">Download Update</a>
+</div>
+<!--  div for capmain -->
+
+
+<!-- font-family: 'Montserrat Alternates', sans-serif;  -->
+   
+<div id="campain" style="display: none; font-family: 'Poppins', sans-serif;   min-width: 800px;" >
+
+   <div clas="header_container">
+		<div class="header" style="font-family: 'Poppins', sans-serif;;">
+			<button class="tablink" id="List" style="background-color: rgb(11, 125, 218);  opacity: 0.5;" value="List" > Lists</button>
+			<button class="tablink" id="Template" value="Templates" style="opacity: 0.5;" >Templates</button>
+			<button class="tablink" id="Campains" value="changepage" style=" opacity: 0.5;">Campaigns</button>
+
+		<!-- cancel button -->
+
+		<div class="cancel-button-container" style="order: 3; flex-grow: 2;">
+			<button  class="cancel-button" id="campain-cancel-button">
+            <span class="material-icons">clear</span>
+         </button>
+		</div>		
+		</div>
+
+
+	</div>
+
+
+	<!-- List Page code starts from here -->
+ 
+<div id="list" style="display:block;">
+	
+   <div id="List__p" style="height: 1000px; display: block; background-color: #F6F6F6; " >
+      <div id="list_p_container" style="  display:  flex; flex-direction: row;height: 65vh;align-content: center;align-items: center;justify-content: space-between; ">
+         <button  id="create_new_list" class="btn btn-primary"  style=" margin-left: 10%; height: 45px; border-radius: 8px;">Create List From Contacts</button>
+         <button class="btn btn-primary"  id="importContact"  style="height: 45px; border-radius: 8px;">Import List From Excel</button>
+         <button class="btn btn-primary"  style="display: none; margin-right: 10%; height: 45px; border-radius: 8px;">Choose Existing List <span class="material-icons" id="openListSelect"> expand_more </span></button>
+         <select class="form-select btn btn-primary" style="width: fit-content; margin-right: 10%; height: 45px; border-radius: 8px;" id="inputGroupSelect022h">
+            <option selected>Choose Existing List...</option>
+          
+          </select>
+      </div>
+      <div  style="  display:  flex;display: none; flex-direction: row;height: 65vh;align-content: center;align-items: center;justify-content: center;">
+         
+
+         <div id="new" style="display: flex;flex-direction: column;width: -webkit-fill-available;float: right;right: 0;">
+            <div id="new_input" style="align-self: center;">
+               <input type="text" class="form__filed" id="input_list_name_"  style="order: 0 ; color: black ; font-weight: 500;    width: 358px;margin-right: 36px;    margin-top: 77px;margin-left: 27px;" placeholder="Enter New List Name"  required  autocomplete="off">	
+
+            </div>
+            <div id="new_button" style="align-self: center;">
+               <!--  -->
+               <!-- <button class="btn btn-primary"  style="margin-top: 48px;"  id="create_new_list" >Create New List</button> -->
+
+            </div>
+         </div>
+         <div style=" margin-left: 4%; font-family: 'Poppins', sans-serif;display: flex; align-content: center;justify-content: center; align-items: center;    margin-top: 4%; margin-right: 4%;font-size: 26px; ">
+            <span >Or</span>
+         </div>
+
+         <div id="old" style=" display: block; left: 0;width: -webkit-fill-available;
+     ">
+            <h2 style="margin-bottom: 25px;text-align:start; margin-top: 10px;font-family: 'Poppins', sans-serif; font-size: 41px; margin-left: 21px;">Select from Lists</h2>
+            <div class="input-group mb-3" style="width: 350px; margin-left: 20px;" id="inputGroupSelect02h">
+               <!-- <select class="form-select btn btn-primary" id="inputGroupSelect022h">
+                 <option selected>Select List...</option>
+               
+               </select> -->
+   
+               
+              </div>
+            </div>
+      </div>
+   </div>
+	<div id="List__">
+
+
+			
+	<div class="list_conatiner">
+		<div class="List">
+			<input type="text" class="form__filed" id="input_list_name"  style="order: 0 ; color: black ; font-weight: 500; position: fixed;" placeholder="Enter a name"  required  autocomplete="off">	
+			<button class="button" id="next_list" style=" height: 54px;display: flex; justify-content: center;   align-items: center; width: 175px;background-color: #7CB5E4;   margin-left: 77%; font-size: 18px; " ><span>Save & Next</span> </button>
+         <div class="dropdown" style="  display: flex;display: none;flex-direction: row;order: 1;position: inherit;height: 36px;width: 40px;" >
+			  <button class="btn" style="border-left:1px solid #0d8bf2;height: 36px;width: 40px;display: flex;align-items: center;justify-content: center;">
+			   
+             <span class="material-icons"> arrow_drop_down</span>
+			  </button>
+			  <div class="dropdown-content" id="list_drop_down" style="height: 300px; overflow: scroll;">
+			  </div>
+			</div>
+		</div>
+
+		<div>
+			<!-- <button  style=" outline: none; border: none; border-radius: 6px;font-size: 25px; margin-right: 10px;background-color: #0074fc;height: 36px;margin-top: 1px;">
+         <span class="material-icons"  id ="create_new_list"  style="color: #FFF; background-color: #0074fc; font-size: 36px;">add</span>
+         </button>  -->
+         <button class="btn btn-primary" id ="create_new_list"  style="margin-right: 10px; margin-top: 1px; height: 36px; display: flex;align-items: center; justify-items: center; font-size: 24px;font-weight: bolder;display: none; ">New List</button>  
+		</div>	
+	</div>
+
+	
+	<div class="main_contact-container " style="object-fit: scale-down;">
+
+		<!--  contact div starts here  -->
+		<div class="contact-container">
+			<div class="contact-container_header">
+				
+				<!-- contact h1  -->
+				<span>
+					<h4 style="font-size: 40px; font-weight: 600;">Contacts</h4>
+				</span>
+
+				
+				<!-- serach bar -->
+				<div class="search_div" style="display: flex; align-items: center; border:1px solid #D1D1D1;"> 
+					<span style="margin-left: 2px;" class="material-icons">search</span>
+					<input type="text"   name="" placeholder="Search.." id="myInput" onkeyup="myFunction()">
+				</div>
+
+				<!-- toogle button  -->
+				<div class="form-check form-switch" ">
+					  
+					  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" style="font-size: 26px;" unchecked  onchange="Show_Selected()" >
+
+					  <label class="form-check-label" for="flexSwitchCheckChecked">Show Selected</label>
+
+				</div>
+				<div style="color: blue; margin-left: 10px ; display: flex; flex-wrap: nowrap; align-content: center;">
+					<span id="Selected_contacts">0</span>
+					<span>/</span>
+					<span id="total_contacts"></span>
+
+					
+				</div>
+            <div>
+               <input type="file" id="importContactFile" style="display: none;" accept=".xls,.xlsx">
+               <button type="file" class="btn btn-primary"style="margin-left: 64px; margin-top: -7px;"> Import</button>
+            </div>
+			</div>
+
+		<!--  contact list -->
+		<div class="contact_table" style=" margin-left: 24px;height: 500px; overflow: scroll;">
+			<Table class="table" id="contact_table" >
+				<thead >
+					<tr>
+						<th scope="col"> Contacts</th>
+						<th scope="col">  </th>
+						<th scope="col"></th>
+						<th scope="col">  Number</th>
+					</tr>
+				</thead>
+				<tbody  style="overflow:scroll" id="table_body">
+					 
+					
+					</tbody>
+			</Table>
+			
+		</div>
+
+		</div>
+
+	</div>
+</div>
+
+<!--  ****************************************   template page  ***************************** -->
+
+
+<!-- tempalte page code  start here  -->
+	<div id="Template__" style= " display: none; background-color:#F6F6F6; height: 600px; ">
+		
+      <div id="Template__p" style="height: 1000px; display: block;" >
+         <div  style="  display: flex;flex-direction: row;height: 65vh;align-content: center;align-items: center;justify-content: space-around;">
+            <button class="btn btn-primary" id="create_new_template" style="height: 45px; border-radius: 8px; width: 223px;">  create New </button>
+            <select style="width: fit-content;width: 223px;padding-right: 31px; height: 45px; border-radius: 8px;" class="form-select btn btn-primary" id="inputGroupSelect023h">
+               <option selected>Select List...</option>
+             
+             </select>
+         </div>
+         <div id="templat_p_container" style="  display: flex;flex-direction: row;height: 65vh;align-content: center;align-items: center;justify-content: center;">
+
+      
+            <div id="new" style="display: flex;flex-direction:column ;width: -webkit-fill-available;float: right;right: 0;">
+               <div id="new_input" style="align-self: center;">
+                  <input type="text" class="form__filed" id="Template_list_name_"  style="order: 0 ; color: black ; font-weight: 500;    width: 358px;margin-right: 36px; margin-top: 77px;margin-left: 27px;" placeholder="Enter New Template Name "  required  autocomplete="off">	
+   
+               </div>
+               <div id="new_button" style="align-self: center; ">
+                  <button class="btn btn-primary" style="margin-top: 48px;"  >Create  New Template</button>
+   
+               </div>
+            </div>
+            <div style=" margin-left: 4%;  font-family: 'Poppins', sans-serif;display: flex; align-content: center;justify-content: center; align-items: center;    margin-top: 4%; margin-right: 4%;font-size: 26px; ">
+               <span >Or</span>
+            </div>
+            <div id="old" style="
+            left: 0;
+            width: -webkit-fill-available;
+        ">
+               <h2 style="margin-bottom: 25px;text-align: start; margin-top: 10px;    margin-left: 26px;  font-size: 41px;">Select  Template</h2>
+               <div class="input-group mb-3" style="width: 350px; margin-left: 20px;" id="inputGroupSelect03h">
+                  <!-- <select class="form-select" id="inputGroupSelect023h">
+                    <option selected>Select List...</option>
+                  
+                  </select> -->
+      
+                  
+                 </div>
+               </div>
+         </div>
+      </div>
+      <div class="list_conatiner">
+         <div class="List">
+            <input type="text" class="form__filed" id ="template_list_name"style=" order: 0 ; color: black ; font-weight: 500;position:fixed;" placeholder="Enter a name"  required  autocomplete="off">	
+            <button class="button"  id="next_template" style="  height: 54px;display: flex; justify-content: center;   align-items: center; width: 175px;background-color: #7CB5E4;   margin-left: 77%; font-size: 18px; " ><span> Save & Next</span> </button>
+
+            <div class="dropdown" style="display: flex; display: none; flex-direction: row;order: 1;position: inherit;height: 36px;width: 40px;" >
+              <button class="btn" style="border-left:1px solid #0d8bf2;height: 36px;width: 40px;display: flex;align-items: center;justify-content: center;">
+               
+                <span class="material-icons"> arrow_drop_down</span>
+              </button>
+              <div class="dropdown-content" id="template_dropdown_content" style="width: 300px; overflow: scroll;">
+
+
+            </div>
+            </div>
+         </div>
+   
+         <div>
+           
+               <button class="btn btn-primary" id ="create_new_template"  style="margin-right: 10px; margin-top: 1px; height: 36px; display: flex;align-items: center; justify-items: center;font-size: 24px;font-weight: bolder; display: none;">Create New</button>  
+          
+         </div>	
+      </div>
+    
+      <meta charset="UTF-8">
+      
+	<!--  message input filed -->
+	<div class="container" style=" background-color: #FFF; padding: 30px; height: 100%; max-width: 1000px; margin-top: 30px;" >
+		
+				<div class="mb-3" >
+					  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+					  <textarea charset="utf8mb4"  class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+				</div>	
+
+				<div style="display:flex; justify-content: space-between; margin-top: 50px;" >
+					
+					<input  type="file" id="template_file" style="height: 36px; width: 300px;" id="myfile"  name="myfile"  style="margin:0px;"></input><br><br>
+					<button class="btn btn-primary"  id="remove_file" style="height: 36px; margin-right:50px" > remove </button>
+				</div>
+
+
+
+	</div>
+
+
+	</div>
+
+<!-- Template page code end here  -->
+
+
+
+
+
+
+
+
+<!--  ****************************************   Campain page  ***************************** -->
+
+
+
+<!-- Campains page code starts here  -->
+	<div id="Campains__" style="padding-bottom: 10px;padding-top: 26px; height: 600px; background-color: #F6F6F6; display: flex; flex-direction: column; justify-content: center; overflow: scroll;">
+		<h2 style=" background-color:#F6F6F6;text-align: center;  ">
+			Campaigns 
+		</h2>
+
+<div class="campain_card"  style=" margin-bottom: 20px;   display: flex; flex-direction: column; background-color: #FFF; width: 80%; margin-left: 10%;height: 300px">
+   <input  charset="utf8mb4" type="text" class="form__filed"  id="campain_input" style="margin-bottom: 40px; color: black ; font-weight: 500;align-self: center;" placeholder="Campaign Name "  required  autocomplete="off"> 	
+
+	<div >
+		<div style=" display: flex; flex-direction: row ; margin-left: 24px;"  >
+			<div class="input-group mb-3" style="width: 300px;margin-left: 150px;margin-right: 20px;" id="inputGroupSelect02">
+				<select class="form-select" id="inputGroupSelect022">
+				  <option selected>Select List...</option>
+				
+				</select>
+			  
+           <div id="person_icon" style="margin-left: 2px; display: flex; align-items: center;">
+            <span class="material-icons" style="color:#546FFF; margin-left: 2px;" >
+               people
+               </span>
+               <span id="selected_list_size" style="font-size: 17px;margin-left: 2px;color: #546FFF;"> </span>
+           </div>
+         </div>
+
+			  <div class="input-group mb-3" style="width: 275px; margin-left:55px; " id="campain_template_select">
+				<select class="form-select" id="inputGroupSelect023">
+				  <option selected>Select Template...</option>
+				  
+				</select>
+			  </div>
+			   
+		</div>
+	</div>
+<div id="estimated_time_container" style="margin-left: 155px;font-size: 30px;">
+<h4 style="font-size: 16px;margin-left: 35px;" >Estimated Time : <span id="estimated_time"> </span></h4>
+</div>
+   <div class="progress" id="send_btn_progress_bar_div" style="display: none;height: 33px; width: 33%; align-self:center;position: relative;margin-right: 26px; ">
+      <div class="progress-bar" id="send_btn_progress_bar" role="progressbar" style="width: 0%;font-size: 20px; position: absolute; text-align: start; padding-left: 10px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+      <h1 style="z-index: 999;position: absolute;font-size: 26px; text-align: center;margin-left: 38%; color: #FFF;" >sending</h1>
+   </div>
+   <div id="send_btn" style=" margin-left :30px; ; align-self: center;"  >
+      <button class="btn btn-primary " id="send_btn_btn" style="float: right;   width: 300px;   height: 50px;   margin-top: 20px;   margin-right: 49px">
+         Send Message
+      </button>
+
+   </div>
+
+</div>
+
+<!--  ****************************************   javacript ***************************** -->
+
+<h2 style="margin-bottom: 25px;text-align: center; margin-top: 10px;font-size: 32px;">Previous Campaigns:</h2>
+<div id="Campains___">
+
+</div>
+</div>
+
+
+      <div id="YouTube_Tutorial_Div" style="display: none;">
+         <!-- <iframe  style="display: block;" id="YouTube_Tutorial_Div"   width="560" height="315" src="https://www.youtube.com/embed/KKOmnlXmqjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+         <!-- <iframe  width="560" height="315" src="https://youtu.be/K3AcSrzkzbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+         <iframe id="YouTube_Tutorial" style="display: block;" width="560" height="315" src="https://www.youtube.com/embed/K3AcSrzkzbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+<!-- 
